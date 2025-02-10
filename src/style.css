@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: rgb(158,173,251);
+  background: radial-gradient(circle, rgba(158,173,251,1) 18%, rgba(239,232,234,1) 63%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja-principal {
+  background-color: #f7eeee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.166);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  padding-top: 20px;
+}
+
+/* Sticky Header Styles */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Task List Styles */
+.task-list-container {
+  max-height: 400px; /* Ajusta la altura máxima que desees */
+  overflow-y: auto; /* Activa el scroll vertical cuando el contenido sobrepase la altura */
+  margin-top: 20px; /* Añade un margen superior para separarlo del sticky */
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.task-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Task Form Styles */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Button for Deleting Task */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .caja-principal {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .task-form {
+    gap: 8px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  .task-list li {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .caja-principal {
+    width: 100%;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .input-field {
+    font-size: 12px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+  }
+
+  .task-list li {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+/* Estilo para tareas completadas */
+.task-completed .task-description {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-completed {
+  background-color: #d3ffd3; /* Fondo verde claro para tareas completadas */
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}

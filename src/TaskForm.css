@@ -1,0 +1,86 @@
+/* Formulario y entradas */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 10px 0px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  /* Estilos para el input de tarea */
+  .task-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .task-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Estilos para el botón */
+  .task-submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%;
+    align-self: center;
+
+}
+  
+  .task-submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .task-submit-btn:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .task-form {
+      padding: 15px;
+    }
+  
+    .task-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .task-submit-btn {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .task-form {
+      padding: 12px;
+    }
+  
+    .task-input {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .task-submit-btn {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  
